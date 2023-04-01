@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:line_icons/line_icons.dart';
 
+import '../../../core/constants.dart';
+
 ValueNotifier<int> indexChangeNotifier = ValueNotifier(0);
 
 class BottomNavigationWidget extends StatelessWidget {
@@ -20,16 +22,19 @@ class BottomNavigationWidget extends StatelessWidget {
             elevation: 0,
             type: BottomNavigationBarType.fixed,
             backgroundColor: backgroundColor,
-            selectedItemColor: Colors.white,
+            selectedItemColor: kWhiteColor,
             unselectedItemColor: Colors.grey,
-            selectedIconTheme: IconThemeData(color: Colors.white),
+            selectedIconTheme: IconThemeData(color: kWhiteColor),
             unselectedIconTheme: const IconThemeData(color: Colors.grey),
-            items: [
+            selectedFontSize: 12,
+            unselectedFontSize: 10,
+            items: const [
               BottomNavigationBarItem(
-                  icon: Icon(
-                    LineIcons.home,
-                  ),
-                  label: 'Home'),
+                icon: Icon(
+                  LineIcons.home,
+                ),
+                label: 'Home',
+              ),
               BottomNavigationBarItem(
                   icon: Icon(
                     LineIcons.newspaper,
