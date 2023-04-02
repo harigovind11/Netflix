@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:netflix/core/constants.dart';
-import 'package:netflix/presentation/search/widgets/title.dart';
+import 'package:netflix/presentation/widgets/title.dart';
 
 const imageUrl =
     'https://www.themoviedb.org/t/p/w220_and_h330_face/ggFHVNu6YYI5L9pCfOacjizRGt.jpg';
@@ -15,7 +15,7 @@ class SearcheResultWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const searchTextTitle(
+        const TextTitle(
           title: 'Movies & TV ',
         ),
         kHeight,
