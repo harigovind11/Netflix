@@ -9,7 +9,7 @@ import '../../core/constants.dart';
 class ScreenDownloads extends StatelessWidget {
   ScreenDownloads({super.key});
   final _widgetList = [
-    const Section1(),
+    // const Section1(),
     Section2(),
     const Section3(),
   ];
@@ -17,7 +17,7 @@ class ScreenDownloads extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(50),
+        preferredSize: Size.fromHeight(80),
         child: AppBarWidget(
           title: 'Downloads',
         ),
@@ -51,69 +51,72 @@ class Section2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return Column(
-      children: [
-        kHeight,
-        const Text(
-          'Introducing Downloads for you',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: kWhiteColor,
-            fontSize: 23,
-            fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
+      child: Column(
+        children: [
+          kHeight,
+          const Text(
+            'Introducing Downloads for you',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: kWhiteColor,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        kHeight,
-        const Text(
-          'We\'ll download a personalised selection of\nmovies and shows for you,  so there\'s \n always something to watch on your\ndevice.',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: kGreyColor,
-            fontSize: 15,
-            fontWeight: FontWeight.w600,
+          kHeight,
+          const Text(
+            'We\'ll download a personalised selection of\nmovies and shows for you,  so there\'s \n always something to watch on your\ndevice.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: kGreyColor,
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        kHeight,
-        Container(
-          width: size.width,
-          height: 350,
-          color: kBlackColor,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Center(
-                child: CircleAvatar(
-                  radius: size.width * .4,
-                  backgroundColor: kGreyColor.withOpacity(.5),
+          kHeight,
+          Container(
+            width: size.width,
+            height: 350,
+            color: kBlackColor,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Center(
+                  child: CircleAvatar(
+                    radius: size.width * .4,
+                    backgroundColor: kGreyColor.withOpacity(.5),
+                  ),
                 ),
-              ),
-              DownloadsImageWidget(
-                imageList: imageList[0],
-                margin: const EdgeInsets.only(
-                  left: 165,
-                  bottom: 50,
+                DownloadsImageWidget(
+                  imageList: imageList[0],
+                  margin: const EdgeInsets.only(
+                    left: 165,
+                    bottom: 50,
+                  ),
+                  angle: 20,
+                  size: Size(size.width * .41, size.height * .27),
                 ),
-                angle: 20,
-                size: Size(size.width * .41, size.height * .27),
-              ),
-              DownloadsImageWidget(
-                imageList: imageList[1],
-                margin: const EdgeInsets.only(
-                  right: 165,
-                  bottom: 50,
+                DownloadsImageWidget(
+                  imageList: imageList[1],
+                  margin: const EdgeInsets.only(
+                    right: 165,
+                    bottom: 50,
+                  ),
+                  angle: -20,
+                  size: Size(size.width * .41, size.height * .27),
                 ),
-                angle: -20,
-                size: Size(size.width * .41, size.height * .27),
-              ),
-              DownloadsImageWidget(
-                imageList: imageList[2],
-                margin: const EdgeInsets.only(top: 15),
-                size: Size(size.width * .47, size.height * .33),
-              ),
-            ],
+                DownloadsImageWidget(
+                  imageList: imageList[2],
+                  margin: const EdgeInsets.only(top: 15),
+                  size: Size(size.width * .47, size.height * .33),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -176,19 +179,22 @@ class _SmartDownloads extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        kWidth,
-        Icon(
-          Icons.settings,
-          color: kWhiteColor,
-        ),
-        kWidth,
-        Text(
-          'Smart Downloads',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ],
+    return Card(
+      color: kBlackColor,
+      child: Row(
+        children: const [
+          kWidth,
+          Icon(
+            Icons.settings,
+            color: kWhiteColor,
+          ),
+          kWidth,
+          Text(
+            'Smart Downloads',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
     );
   }
 }

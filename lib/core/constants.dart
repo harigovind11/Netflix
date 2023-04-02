@@ -4,5 +4,5 @@ const kWidth = SizedBox(
   width: 15,
 );
 const kHeight = SizedBox(
-  height: 15,
+  height: 20,
 );
