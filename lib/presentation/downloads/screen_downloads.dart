@@ -55,7 +55,7 @@ class Section2 extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          kHeight,
+          kHeight20,
           const Text(
             'Introducing Downloads for you',
             textAlign: TextAlign.center,
@@ -65,7 +65,7 @@ class Section2 extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          kHeight,
+          kHeight20,
           const Text(
             'We\'ll download a personalised selection of\nmovies and shows for you,  so there\'s \n always something to watch on your\ndevice.',
             textAlign: TextAlign.center,
@@ -75,7 +75,7 @@ class Section2 extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          kHeight,
+          kHeight20,
           Container(
             width: size.width,
             height: 350,

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:netflix/core/constants.dart';
-import 'package:netflix/presentation/widgets/title.dart';
+import 'package:netflix/presentation/widgets/main_title.dart';
 
 const imageUrl =
     'https://www.themoviedb.org/t/p/w220_and_h330_face/ggFHVNu6YYI5L9pCfOacjizRGt.jpg';
@@ -15,10 +15,10 @@ class SearcheResultWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TextTitle(
+        const MainTitle(
           title: 'Movies & TV ',
         ),
-        kHeight,
+        kHeight20,
         Expanded(
             child: GridView.count(
                 shrinkWrap: true,
@@ -27,15 +27,15 @@ class SearcheResultWidget extends StatelessWidget {
                 crossAxisSpacing: 10,
                 childAspectRatio: 1 / 1.4,
                 children: List.generate(20, (index) {
-                  return const MainCard();
+                  return const _ViewCard();
                 })))
       ],
     );
   }
 }
 
-class MainCard extends StatelessWidget {
-  const MainCard({super.key});
+class _ViewCard extends StatelessWidget {
+  const _ViewCard({super.key});
 
   @override
   Widget build(BuildContext context) {

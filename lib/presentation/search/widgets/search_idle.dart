@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/constants.dart';
-import 'package:netflix/presentation/widgets/title.dart';
+import 'package:netflix/presentation/widgets/main_title.dart';
 
 final List imageUrl = [
   'https://www.themoviedb.org/t/p/w250_and_h141_face/uGy4DCmM33I7l86W7iCskNkvmLD.jpg'
@@ -17,15 +17,15 @@ class SearchIdleWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TextTitle(
+        const MainTitle(
           title: 'Top Searches',
         ),
-        kHeight,
+        kHeight20,
         Expanded(
           child: ListView.separated(
             shrinkWrap: true,
             itemBuilder: (ctx, index) => const TopSearchItemTile(),
-            separatorBuilder: (ctx, index) => kHeight,
+            separatorBuilder: (ctx, index) => kHeight20,
             itemCount: 10,
           ),
         )

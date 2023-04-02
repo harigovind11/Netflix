@@ -9,6 +9,7 @@ environment:
   sdk: '>=2.19.2 <3.0.0'
 
 dependencies:
+  bordered_text: ^2.0.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
@@ -16,7 +17,6 @@ dependencies:
   line_icons: ^2.0.0
 
 dev_dependencies:
-
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
