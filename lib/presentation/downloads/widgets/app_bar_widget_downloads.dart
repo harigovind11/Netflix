@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:netflix/core/constants.dart';
 import 'package:netflix/presentation/downloads/screen_downloads.dart';
 
-import '../../core/constants.dart';
-
-class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({required this.title, super.key});
+class AppBarWidgetDownloads extends StatelessWidget {
+  const AppBarWidgetDownloads({required this.title, super.key});
   final String title;
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:netflix/presentation/widgets/app_bar_widget.dart';
 
 import '../../core/colors/colors.dart';
 import '../../core/constants.dart';
+import 'widgets/app_bar_widget_downloads.dart';
 
 class ScreenDownloads extends StatelessWidget {
   ScreenDownloads({super.key});
@@ -18,8 +18,10 @@ class ScreenDownloads extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(80),
-        child: AppBarWidget(
-          title: 'Downloads',
+        child: SizedBox(
+          child: AppBarWidgetDownloads(
+            title: 'Downloads',
+          ),
         ),
       ),
       body: ListView.separated(
