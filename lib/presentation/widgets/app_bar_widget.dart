@@ -34,9 +34,15 @@ class AppBarWidget extends StatelessWidget {
             ),
             kWidth,
             Container(
-              color: Colors.blue,
               width: 30,
               height: 30,
+              decoration: BoxDecoration(
+                borderRadius: kRadius5,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(kUserAvathar),
+                ),
+              ),
             ),
             kWidth,
           ],
