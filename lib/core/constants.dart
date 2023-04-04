@@ -14,7 +14,8 @@ const kMainImage =
     'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/x23Fqkt00uqV2TzfSiB60hrc3HY.jpg';
 const kUserAvathar =
     'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117';
-
+const kNewAndHotTempImg =
+    "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg";
 //Style
 
 const TextStyle kHomeTitleTextStyle =
