@@ -1,3 +1,3 @@
-# netflix
+# Netflix
 
 Netflix Clone App
