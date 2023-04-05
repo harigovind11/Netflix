@@ -4,8 +4,10 @@ import 'package:line_icons/line_icons.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/presentation/home/widgets/custom_button_widget.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/coming_soon_widgets.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/video_widget.dart';
 
 import '../../core/constants.dart';
+import 'widgets/everones_watching_widget.dart';
 
 class ScreenNewAndHot extends StatelessWidget {
   const ScreenNewAndHot({super.key});
@@ -39,7 +41,7 @@ class ScreenNewAndHot extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: kRadius5,
                   image: const DecorationImage(
-                    fit: BoxFit.cover,
+                    // fit: BoxFit.cover,
                     image: NetworkImage(kUserAvathar),
                   ),
                 ),
@@ -83,6 +85,9 @@ class ScreenNewAndHot extends StatelessWidget {
   }
 
   _buildEveryonesWatching() {
-    return const SizedBox();
+    return ListView.builder(
+        itemCount: 10,
+        itemBuilder: (BuildContext context, index) =>
+            const EveryonesWatchingWidget());
   }
 }

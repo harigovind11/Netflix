@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const kWidth = SizedBox(width: 15);
 const kHeight10 = SizedBox(height: 10);
 const kHeight20 = SizedBox(height: 20);
-
+const kHeight50 = SizedBox(height: 50);
 //border radius
 final BorderRadius kRadius5 = BorderRadius.circular(5);
 final BorderRadius kRadius10 = BorderRadius.circular(10);

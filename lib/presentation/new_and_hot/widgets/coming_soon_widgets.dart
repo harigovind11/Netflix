@@ -5,6 +5,8 @@ import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/constants.dart';
 import 'package:netflix/presentation/home/widgets/custom_button_widget.dart';
 
+import 'video_widget.dart';
+
 class ComingSoonWidget extends StatelessWidget {
   const ComingSoonWidget({
     super.key,
@@ -43,33 +45,7 @@ class ComingSoonWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Stack(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      height: 200,
-                      child: Image.network(
-                        kNewAndHotTempImg,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 10,
-                      right: 10,
-                      child: CircleAvatar(
-                        radius: 23,
-                        backgroundColor: kBlackColor.withOpacity(.7),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            LineIcons.volumeMute,
-                            size: 22,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                const VideoWidget(),
                 kHeight10,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

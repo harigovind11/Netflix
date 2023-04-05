@@ -28,7 +28,10 @@ class CustomButtomWidget extends StatelessWidget {
         Text(
           '$label',
           style: TextStyle(
-              fontSize: textSize, fontWeight: FontWeight.bold, color: color),
+            fontSize: textSize,
+            fontWeight: FontWeight.bold,
+            color: color,
+          ),
         )
       ],
     );
