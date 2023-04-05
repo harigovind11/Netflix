@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/core/colors/colors.dart';
+import 'package:netflix/core/colors.dart';
 import 'package:line_icons/line_icons.dart';
 
 import '../../../core/constants.dart';

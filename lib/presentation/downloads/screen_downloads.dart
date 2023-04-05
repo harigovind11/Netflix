@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../../core/colors/colors.dart';
+import '../../core/colors.dart';
 import '../../core/constants.dart';
 import 'widgets/app_bar_widget_downloads.dart';
 

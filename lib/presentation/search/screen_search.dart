@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix/presentation/search/widgets/search_idle.dart';
 import 'package:netflix/presentation/search/widgets/search_result.dart';
 
-import '../../core/colors/colors.dart';
+import '../../core/colors.dart';
 import '../../core/constants.dart';
 
 class ScreenSearch extends StatelessWidget {
