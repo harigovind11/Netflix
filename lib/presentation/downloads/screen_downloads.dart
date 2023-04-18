@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:netflix/application/downloads/downloads_bloc.dart';
 
 import '../../core/colors.dart';
 import '../../core/constants.dart';
@@ -53,6 +55,14 @@ class Section2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+
+    /*the DownloadsEvent calls after building section2   
+    once its buildes then it wont calls again*/
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      BlocProvider.of<DownloadsBloc>(context)
+          .add(const DownloadsEvent.getDownloadsImages());
+    });
+
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: Column(
